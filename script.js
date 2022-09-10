@@ -33,6 +33,12 @@ const resetForm = () => {
     e.style.border = '1px solid var(--Light-grayish-violet)'
     e.style.outline = '1px solid var(--Light-grayish-violet)'
   })
+
+  cardName.innerText = 'Jane Appleseed'
+  cardNumber.innerText = '0000 0000 0000 0000'
+  cvc.innerText = '000'
+  monthCard.innerText = '00'
+  year.innerText = '00'
 }
 
 
