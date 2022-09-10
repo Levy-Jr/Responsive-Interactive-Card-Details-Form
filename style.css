@@ -37,7 +37,7 @@ body {
 }
 
 .bg-card-front {
-  translate: 100px;
+  transform: translateX(100px);
   position: relative;
   display: flex;
   justify-content: center;
@@ -104,12 +104,12 @@ span.card__number {
 .bg-card-back {
   position: relative;
   margin-top: 2rem;
-  translate: 50%;
+  transform: translateX(50%);
 }
 
 .back-bg-content {
   top: 48%;
-  translate: 0 -50%;
+  transform: translateY(-50%);
   left: 80%;
   position: absolute;
   font-size: .9rem;
@@ -295,7 +295,7 @@ input::placeholder{
 
   .back-bg-content {
     top: 48%;
-    translate: 0 -50%;
+    transform: translateY(-50%);
     left: 80%;
     position: absolute;
     font-size: .7rem;
@@ -327,7 +327,7 @@ input::placeholder{
     position: relative;
     margin-top: 2rem;
     max-width: 300px;
-    translate: -50%;
+    transform: translateX(-50%);
     left: 50%;
   }
 
@@ -342,7 +342,7 @@ input::placeholder{
     max-width: 300px;
     top: -77px;
     z-index: 1;
-    translate: -50%;
+    transform: translateX(-50%);
     left: 40%;
   }
 
