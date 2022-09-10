@@ -19,7 +19,7 @@
 </head>
 <body>
 
-  <div class="left">
+  <div class="left" role="figure">
 
     <div class="section__cards">
 
@@ -60,8 +60,9 @@
 
 
 
-  <div class="right">
-    <form action="#">
+  <main class="right" role="main">
+    <h1 hidden>Form</h1>
+    <form action="#" role="form">
       <div class="card__holder">
           Cardholder Name
           <input type="text" placeholder="e.g. Jane Appleseed" id="cardholder">
@@ -98,7 +99,6 @@
       </div>
       <div class="button">Confirm</div>
     </form>
-
     <!-- Completed state start -->
     
   <div class="complete-state">
@@ -107,10 +107,14 @@
     <span>We've added your card details</span>
     <div class="button continue">Continue</div> 
   </div>
+</main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a target="_blank" href="https://github.com/Levy-Jr">Levy Jr</a>.
-  </div>
+
+  <footer role="contentinfo">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a target="_blank" href="https://github.com/Levy-Jr">Levy Jr</a>.
+    </div>
+  </footer>
 </body>
 </html>
