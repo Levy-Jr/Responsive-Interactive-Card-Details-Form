@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: absolute; bottom: 1rem; left: 50%; translate: -50%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="left">
+
+    <div class="section__cards">
+
+
+        <div class="bg-card-front">
+          <img src="images/bg-card-front.png" alt="front card">
+          <div class="circles">
+            <div class="white__circle"></div>
+            <div class="border__circle"></div>
+          </div>
+          <div class="front-bg-content">
+            <span class="card card__number">0000 0000 0000 0000</span>
+          </div>
+          <div class="bottom-bg-content">
+            <div class="bottom__card">
+              <span class="card card__user">jane appleseed</span>
+              <span class="card card__date"> <span class="month">00</span>/<span class="year">00</span> </span>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="bg-card-back">
+          <img src="images/bg-card-back.png" alt="back card">
+        <div class="back-bg-content">
+          <span class="card card__cvc">000</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!--         FORM SIDE            -->
+
+
+
+  <div class="right">
+    <form action="#">
+      <div class="card__holder">
+          Cardholder Name
+          <input type="text" placeholder="e.g. Jane Appleseed" id="cardholder">
+          <span class="textError"></span>
+    </div>
+        <div class="card__number">
+          Card Number
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" id="cardnumber">
+          <span class="textError"></span>
+        </div>
+
+      <div class="bottom_form">
+          <span class="wrap">
+            Exp. Date (MM/YY)
+            <div class="exp__Date">
+
+              <span>
+                <input type="text" placeholder="MM" maxlength="2" id="MM">
+                <span class="textError"></span>
+            </span>
+
+            <span>
+                <input type="text" placeholder="YY" maxlength="2" id="YY">
+                <span class="textError"></span>
+            </span>
+            
+            </div>
+          </span>
+          <div class="CVC">
+            <span style="margin-bottom: .5rem ;">CVC</span>
+            <input type="text" placeholder="e.g. 123" maxlength="3" id="CVC">
+            <span class="textError"></span>
+          </div>
+      </div>
+      <div class="button">Confirm</div>
+    </form>
+
+    <!-- Completed state start -->
+    
+  <div class="complete-state">
+    <img src="images/icon-complete.svg" alt="" srcset="">
+  <h1>Thank you!</h1>
+    <span>We've added your card details</span>
+    <div class="button continue">Continue</div> 
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Levy-Jr">Levy Jr</a>.
+  </div>
+</body>
+</html>

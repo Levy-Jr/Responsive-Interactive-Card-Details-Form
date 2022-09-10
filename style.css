@@ -1,0 +1,387 @@
+:root {
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/*
+  - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+  --Red (input errors): hsl(0, 100%, 66%)
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  background: url('images/bg-main-desktop.png') no-repeat;
+  width: 30%;
+  color: var(--White);
+}
+
+.section__cards {
+  width: 100%;
+  margin-top: 100px;
+  height: calc(100% - 112px);
+}
+
+.bg-card-front {
+  translate: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.bg-card-front img, .bg-card-back img{
+  width: 100%;
+}
+
+.circles {
+  top: 15%;
+  left: 10%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.circles :not(:first-child) {
+  margin-left: 1rem;
+}
+
+.white__circle {
+  background-color: var(--White);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.border__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.front-bg-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.bottom-bg-content {
+  position: absolute;
+  bottom: 1rem;
+  width: 80%;
+}
+
+.bottom__card {
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: .9rem;
+}
+
+span.card__number {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.bg-card-back {
+  position: relative;
+  margin-top: 2rem;
+  translate: 50%;
+}
+
+.back-bg-content {
+  top: 48%;
+  translate: 0 -50%;
+  left: 80%;
+  position: absolute;
+  font-size: .9rem;
+}
+
+.right {
+  width: 70%;
+  display: flex;
+  justify-content: right;
+  padding: 0rem 5rem 0rem 10rem;
+  align-items: center;
+  color: var(--Very-dark-violet);
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  font-size: .9rem;
+}
+
+label, input {
+  cursor: pointer;
+  width: 100%;
+}
+
+input {
+  padding: .7rem 1rem;
+  border: 1px solid var(--Light-grayish-violet);
+  color: var(--Very-dark-violet);
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  outline: 1px solid var(--Light-grayish-violet);
+}
+
+input:focus {
+  border: 1px solid hsl(278, 94%, 30%);
+}
+
+input::placeholder{
+  color: var(--Light-grayish-violet);
+  font-weight: 500;
+}
+
+.card__holder {
+  margin-bottom: 1rem;
+}
+
+#cardholder {
+  margin: .5rem 0rem 0rem 0rem;
+}
+
+.card__number {
+  margin-bottom: 1rem;
+}
+
+#cardnumber {
+  margin: .5rem 0rem .3rem 0rem;
+}
+
+.bottom_form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.exp__Date {
+  display: inline-flex;
+  width: 90%;
+  margin: .5rem 0rem .3rem 0rem;
+}
+
+.wrap {
+  display: inline;
+  width: 90%;
+}
+
+.exp__Date span + span {
+  margin-left: 15px;
+}
+
+.CVC {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#cvc {
+  margin: .5rem 0rem .3rem 0rem;
+}
+
+.button {
+  color: var(--Light-grayish-violet);
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 1.1em 0;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background-color: var(--Very-dark-violet);
+}
+
+.textError {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.complete-state {
+  width: min(100%, 400px);
+  display: none;
+  text-align: center;
+  padding-right: 5rem;
+}
+
+.complete-state h1{
+  font-weight: 500;
+  margin: 1.5rem 0rem .5rem 0rem;
+}
+
+.complete-state span {
+  color: var(--Dark-grayish-violet);
+  text-transform: none;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+  span.card__number {
+    font-size: 1.2rem;
+  }
+
+  .white__circle {
+    background-color: var(--White);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
+  .border__circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  span.card__number {
+    font-size: .9rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .circles {
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+
+  .white__circle {
+    background-color: var(--White);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .border__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+  }
+
+  .bottom__card {
+    font-size: .7rem;
+  }
+
+  .back-bg-content {
+    top: 48%;
+    translate: 0 -50%;
+    left: 80%;
+    position: absolute;
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    background: url('images/bg-main-mobile.png') no-repeat;
+    background-size: 100%;
+  }
+
+  .section__cards {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .bg-card-back {
+    position: relative;
+    margin-top: 2rem;
+    max-width: 300px;
+    translate: -50%;
+    left: 50%;
+  }
+
+  .back-bg-content {
+    font-size: .8rem;
+  }
+  
+  .bg-card-front {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    top: -77px;
+    z-index: 1;
+    translate: -50%;
+    left: 40%;
+  }
+
+  span.card__number {
+    font-size: 1rem;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0rem;
+  }
+
+  form {
+    padding: 1rem 1.25rem;
+  }
+
+  .complete-state{
+    padding: 1.5rem .5rem;
+  }
+
+  .exp__Date input + input {
+    margin-left: .2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bg-card-front {
+    max-width: 280px;
+    top: -65px;
+    left: 45%;
+  }
+
+  .bg-card-back {
+    max-width: 280px;
+  }
+
+  form {
+    padding: 1rem 2rem;
+  }
+}
