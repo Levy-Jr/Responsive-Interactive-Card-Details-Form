@@ -4,4 +4,6 @@ Acesse a página: https://levy-jr.github.io/Responsive-Interactive-Card-Details-
 
 ![Design preview for the Interactive card details form coding challenge](./design/desktop-design.jpg)
 
-![Design preview for the Interactive card details form coding challenge](./design/mobile-design.jpg)
+<p align="center">
+  <img src="./design/mobile-design.jpg">
+</p>
